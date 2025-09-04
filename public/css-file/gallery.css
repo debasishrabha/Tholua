@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container-gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 40px 20px 0 20px;
+}
+
+.container-gallery .tholua-gallery {
+    width: 50%;
+    padding-bottom: 50px;
+}
+
+.container-gallery .tholua-gallery h3 {
+    font-size: 3em;
+    font-weight: bolder;
+    padding-top: 80px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #222;
+}
+
+.container-gallery .tholua-gallery h3 span {
+    font-weight: 100;
+}
+
+.container-gallery .column {
+    display: flex;
+    flex-direction: row;
+    padding-top: 60px;
+    justify-content: space-between;
+}
+
+.container-gallery .column .first-box {
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+}
+
+.container-gallery .column .first-box img {
+    width: 100%;
+    padding-bottom: 15px;
+    border-radius: 5px;
+    /* Make sure images take up the full width of their container */
+    height: auto;
+    /* Maintain aspect ratio */
+    object-fit: cover;
+    /* Ensure images cover their container without distortion */
+}
+
+/* Mobile Grid Layout (under 768px) */
+@media only screen and (max-width: 768px) {
+    .container-gallery {
+        margin: 20px 10px;
+    }
+
+    .container-gallery .tholua-gallery {
+        width: 90%;
+        padding-bottom: 30px;
+    }
+
+    .container-gallery .tholua-gallery h3 {
+        font-size: 2em;
+        padding-top: 40px;
+        padding-bottom: 8px;
+    }
+
+    /* Grid Layout for Mobile */
+    .container-gallery .column {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        width: 100%;
+        padding-top: 30px;
+    }
+
+    .container-gallery .column .first-box {
+        width: 100%;
+        margin: 0;
+    }
+
+    .container-gallery .column .first-box img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+}
+
+/* Optional: Extra small devices (phones under 400px) */
+@media only screen and (max-width: 400px) {
+    .container-gallery .tholua-gallery h3 {
+        font-size: 1.5em;
+    }
+}

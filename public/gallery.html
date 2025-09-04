@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css-file/style.css">
+    <link rel="stylesheet" href="css-file/gallery.css">
+    <link rel="stylesheet" href="css-file/cart.css">
+    <!-- <link rel="stylesheet" href="/css-file/nonveg.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/f1035c0313.js"></script>
+    <title>Gallery | Tholua</title>
+    <script src="javascript/config.js"></script>
+    <script src="javascript/script.js" defer></script>
+    <script src="javascript/cart.js" defer></script>
+    <script src="javascript/auth.js"></script>
+</head>
+
+<body class="body-gallery">
+    <header>
+        <div class="logo"><a href="index.html">Tholua</a></div>
+
+        <nav>
+            <div class="bar" onclick="toggleNav()">☰</div>
+
+            <ul class="nav-link">
+                <a href="Menu.html">
+                    <li>Menu</li>
+                </a>
+                <a href="event.html">
+                    <li>Events</li>
+                </a>
+                <a href="gallery.html">
+                    <li>Gallery</li>
+                </a>
+                <a href="about.html">
+                    <li>About</li>
+                </a>
+            </ul>
+        </nav>
+        <div class="User">
+            <a>
+                <div class="shopping"><i class="fa-solid fa-cart-shopping"></i>
+                    <span class="quantity">0</span>
+                </div>
+            </a>
+
+            <div class="login-btn">
+                <a><i class="fa-solid fa-user"></i></a>
+            </div>
+
+        </div>
+    </header>
+    <div class="modal">
+        <div class="modal-content">
+            <div class="form-box login">
+                <div class="wrapper">
+                    <span class="close">&times;</span>
+                    <form action="#">
+                        <h2>Login</h2>
+                        <div class="input-field">
+                            <input type="text" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="forget">
+                            <label for="remember">
+                                <input type="checkbox" id="remember">
+                                <p>Remember me</p>
+                            </label>
+                            <a href="#">Forgot password?</a>
+                        </div>
+                        <button type="submit">Log In</button>
+                        <div class="register">
+                            <p>Don't have an account? <a href="#" class="signup-link">Sign Up</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="form-box signup">
+                <div class="wrapper">
+                    <span class="close">&times;</span>
+                    <form action="#">
+                        <h2>Sign Up</h2>
+                        <div class="input-field">
+                            <input type="text" required />
+                            <label>Your Name</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" required>
+                            <label>Enter your email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" required>
+                            <label>Create your password</label>
+                        </div>
+                        <div class="Policy-text">
+                            <input type="checkbox" id="policy">
+                            <label for="policy">
+                                I agree the
+                                <a href="#">Terms & Conditiion</a></thead>
+                            </label>
+                        </div>
+                        <button type="submit">Sign Up</button>
+                        <div class="register">
+                            <p>Already have an account? <a href="#" class="login-link">Sign In</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-gallery">
+        <div class="tholua-gallery">
+            <h3>Tholua <span>Gallery</span></h3>
+        </div>
+        <div class="column">
+            <div class="first-box">
+                <img src="imgUrl/th5.jpg">
+                <img src="imgUrl/th2.jpg">
+                <img src="imgUrl/th3.jpg">
+                <img src="imgUrl/th6.jpg">
+                <img src="imgUrl/th7.jpg">
+                <img src="imgUrl/th4.jpg">
+                <img src="imgUrl/th1.jpg">
+            </div>
+            <div class="first-box">
+                <img src="imgUrl/img33.jpg" loading="lazy">
+                <img src="imgUrl/img2.jpg" loading="lazy">
+                <img src="imgUrl/img5.jpg" loading="lazy">
+                <img src="imgUrl/img4.jpg" loading="lazy">
+                <img src="imgUrl/img1.jpg" loading="lazy">
+            </div>
+            <div class="first-box">
+                <img src="imgUrl/img6.jpg" loading="lazy">
+                <img src="imgUrl/img7.jpg" loading="lazy">
+                <img src="imgUrl/img8.jpg" loading="lazy">
+                <img src="imgUrl/img9.jpg" loading="lazy">
+                <img src="imgUrl/img10.jpg" loading="lazy">
+            </div>
+        </div>
+    </div>
+    <div class="Add-to-cart-tab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart">
+
+        </div>
+        <p class="total">Total: ₹0</p>
+        <div class="btn">
+            <button class="close-btn">Close</button>
+            <button class="checkOut-btn">Check Out</button>
+        </div>
+        <div class="cart-summary"></div>
+        <!-- <p class="quantity">Items: 0</p> -->
+    </div>
+    <footer>
+        <div class="row">
+            <div class="col"><a class="logo-footer" href="#">Tholua</a>
+                <p>Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                    scrambled it to make a type specimen book</p>
+            </div>
+            <div class="col">
+                <h3>Office</h3>
+                <p>ITPL Road</p>
+                <p>Whitefield, Bangalore</p>
+                <p>Karnataka, PIN 560066, India</p>
+                <p class="email-id">Thoula111@gmail.com</p>
+                <h4>+91 - 0123456789</h4>
+            </div>
+            <div class="col">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Menu</a></li>
+                    <li><a href="">Events</a></li>
+                    <li><a href="">Gallery</a></li>
+                    <li><a href="">About</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Newsletter</h3>
+                <form class="foot">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Enter your email id" required>
+                    <button type="submit"><i class="fa-solid fa-arrow-right" style="color: #ccc;"></i></button>
+                </form>
+                <div class="social-icons">
+                    <i class="fa-brands fa-square-instagram" style="color: #ccc;"></i>
+                    <i class="fa-brands fa-square-facebook" style="color: #ccc;"></i>
+                    <i class="fa-brands fa-square-whatsapp" style="color: #ccc;"></i>
+                    <i class="fa-brands fa-square-pinterest" style="color: #ccc;"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

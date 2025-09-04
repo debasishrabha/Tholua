@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css-file/nonveg.css">
+    <link rel="stylesheet" href="css-file/cart.css">
+    <link rel="stylesheet" href="css-file/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Tholua</title>
+    <script src="javascript/config.js"></script>
+    <script src="javascript/auth.js"></script>
+    <script src="javascript/script.js" defer></script>
+    <script src="javascript/cart.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="index.html">Tholua</a></div>
+
+        <nav>
+            <div class="bar" onclick="toggleNav()">☰</div>
+
+            <ul class="nav-link">
+                <a href="Menu.html">
+                    <li>Menu</li>
+                </a>
+                <a href="event.html">
+                    <li>Events</li>
+                </a>
+                <a href="gallery.html">
+                    <li>Gallery</li>
+                </a>
+                <a href="about.html">
+                    <li>About</li>
+                </a>
+            </ul>
+        </nav>
+        <div class="User">
+            <a>
+                <div class="shopping"><i class="fa-solid fa-cart-shopping"></i>
+                    <span class="quantity">0</span>
+                </div>
+            </a>
+
+            <div class="login-btn">
+                <a><i class="fa-solid fa-user"></i></a>
+            </div>
+
+        </div>
+    </header>
+    <div class="modal">
+        <div class="modal-content">
+            <div class="form-box login">
+                <div class="wrapper">
+                    <span class="close">&times;</span>
+                    <form action="#">
+                        <h2>Login</h2>
+                        <div class="input-field">
+                            <input type="text" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="forget">
+                            <label for="remember">
+                                <input type="checkbox" id="remember">
+                                <p>Remember me</p>
+                            </label>
+                            <a href="#">Forgot password?</a>
+                        </div>
+                        <button type="submit">Log In</button>
+                        <div class="register">
+                            <p>Don't have an account? <a href="#" class="signup-link">Sign Up</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="form-box signup">
+                <div class="wrapper">
+                    <span class="close">&times;</span>
+                    <form action="#">
+                        <h2>Sign Up</h2>
+                        <div class="input-field">
+                            <input type="text" required />
+                            <label>Your Name</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" required>
+                            <label>Enter your email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" required>
+                            <label>Create your password</label>
+                        </div>
+                        <div class="Policy-text">
+                            <input type="checkbox" id="policy">
+                            <label for="policy">
+                                I agree the
+                                <a href="#">Terms & Conditiion</a></thead>
+                            </label>
+                        </div>
+                        <button type="submit">Sign Up</button>
+                        <div class="register">
+                            <p>Already have an account? <a href="#" class="login-link">Sign In</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="txt">
+        <h3>
+            <ul>
+                <li> Fast Foods</li>
+            </ul>
+        </h3>
+    </div>
+    <hr>
+    <div class="container-list">
+        <div class="items">
+            <div class="items" data-id="1" data-name="Chicken Burger" data-price="60" data-image="fast1.webp">
+                <img src="imgUrl/fast1.webp" alt="nonveg1" width="100%" height="221px">
+                <div class=text>
+                    <h3>Chicken Burger.</h3>
+                    <p>Chicken burger with other fillings, serves one.
+                    <p><br>
+                    <h3>₹60.00 </h3>
+                    <div class="addtokart">
+                        <h3>Add to cart +</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="items" data-id="2" data-name="Veg Burger" data-price="40" data-image="fast2.webp">
+                <img src="imgUrl/fast2.webp" alt="nonveg2" width="100%" height="221px">
+                <div class=text>
+                    <h3>Veg Burger.</h3>
+                    <p>veg burger with other fillings, serves one.
+                    <p><br><br>
+                    <h3>₹40.00 </h3>
+                    <div class="addtokart">
+                        <h3>Add to cart +</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="items" data-id="3" data-name="Chicken Chow Mein" data-price="90" data-image="fast3.jpg">
+                <img src="imgUrl/fast3.jpg" alt="nonveg3" width="100%" height="221px">
+                <div class=text>
+                    <h3>Chicken Chow Mein.</h3>
+                    <p>chicken chowmein and other tasty fillings, serves one.
+                    <p><br>
+                    <h3>₹90.00 </h3>
+                    <div class="addtokart">
+                        <h3>Add to cart +</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="items" data-id="4" data-name="Vegetable Chow Mein" data-price="50" data-image="fast4.webp">
+                <img src="imgUrl/fast4.webp" alt="nonveg4" width="100%" height="221px">
+                <div class=text>
+                    <h3>Vegetable Chow Mein.</h3>
+                    <p>veg chowmein with brocoli and capcicum, serves one.
+                    <p><br>
+                    <h3>₹50.00 </h3>
+                    <div class="addtokart">
+                        <h3>Add to cart +</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="items" data-id="5" data-name="French Fries" data-price="30" data-image="fast5.webp">
+                <img src="imgUrl/fast5.webp" alt="nonveg6" width="100%" height="221px">
+                <div class=text>
+                    <h3>French Fries.</h3>
+                    <p>french fries with tomato cachup, serves one.
+                    <p><br>
+                    <h3><del>₹50</del> ₹30.00 offer</h3>
+                    <div class="addtokart">
+                        <h3>Add to cart +</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="items" data-id="6" data-name="Pasta" data-price="50" data-image="fast6.jpg">
+                <img src="imgUrl/nonveg6.jpg" alt="nonveg7" width="100%" height="221px">
+                <div class=text>
+                    <h3>Pasta.</h3>
+                    <p>Pasta veg with tomato cachup, serves one.
+                    <p><br>
+                    <h3> ₹50.00 </h3>
+                    <div class="addtokart">
+                        <h3>Add to cart +</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="items" data-id="7" data-name="Chicken Roll" data-price="60" data-image="fast7.webp">
+                <img src="imgUrl/nonbrg7.webp" alt="nonveg8" width="100%" height="221px">
+                <div class=text>
+                    <h3>Chicken Roll.</h3>
+                    <p>Chicken roll with extra macronies and cheese, serves one.
+                    <p><br>
+                    <h3> ₹60.00 </h3>
+                    <div class="addtokart">
+                        <h3>Add to cart +</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="items" data-id="8" data-name="Veg Roll" data-price="40" data-image="fast8.jpg">
+                <img src="imgUrl/nonveg8.jpg" alt="nonveg8" width="100%" height="221px">
+                <div class=text>
+                    <h3>Veg Roll.</h3>
+                    <p>veg roll with extra macronies one piece per order, serves one.
+                    <p><br>
+                    <h3> ₹40.00 </h3>
+                    <div class="addtokart">
+                        <h3>Add to cart +</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="items" data-id="9" data-name="Momo" data-price="60" data-image="fast9.jpg">
+                <img src="imgUrl/nonveg9.jpg" alt="nonveg8" width="100%" height="221px">
+                <div class=text>
+                    <h3>Momo.</h3>
+                    <p>Momo with chicken fillings and amazing soup,5 pieces of momo , serves one.
+                    <p>
+                        <br>
+                    <h3> ₹60.00 </h3>
+                    <div class="addtokart">
+                        <h3>Add to cart +</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="items" data-id="8" data-name="Fried Momo" data-price="80" data-image="fast10.webp">
+                <img src="imgUrl/nonveg10.webp" alt="nonveg8" width="100%" height="221px">
+                <div class=text>
+                    <h3>Fried Momo.</h3>
+                    <p>fried momo with chicken fillings and amazing soup,5 pieces, serves one.
+                    <p><br>
+
+                    <h3> ₹80.00 </h3>
+                    <div class="addtokart">
+                        <h3>Add to cart +</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Add-to-cart-tab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart">
+
+        </div>
+        <p class="total">Total: ₹0</p>
+        <div class="btn">
+            <button class="close-btn">Close</button>
+            <button class="checkOut-btn">Check Out</button>
+        </div>
+        <div class="cart-summary"></div>
+        <!-- <p class="quantity">Items: 0</p> -->
+    </div>
+
+    <!-- <script src="javascript/menu.js" charset="utf-8"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - Food App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="css-file/payment.css" rel="stylesheet">
+    <script src="javascript/payment.js" defer></script>
+
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="checkout-container">
+            <!-- LEFT SECTION -->
+            <div class="left-section">
+                <h2>Confirm Delivery Details</h2>
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Enter your full name" required />
+                    <span class="error-message">Please enter your name</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" required />
+                    <span class="error-message">Please enter a valid phone number</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Delivery Address</label>
+                    <textarea id="address" class="form-control"
+                        placeholder="Enter complete delivery address with landmarks" required></textarea>
+                    <span class="error-message">Please enter your delivery address</span>
+                </div>
+
+                <h3>Your Order</h3>
+                <div class="order-summary">
+                </div>
+            </div>
+
+            <!-- RIGHT SECTION -->
+            <div class="right-section">
+                <div class="success-message" id="successMessage">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Payment successful! Your order has been placed.</span>
+                </div>
+
+                <h2>Select Payment Method</h2>
+                <div class="payment-options">
+                    <!-- Card Payment -->
+                    <label class="payment-method">
+                        <input type="radio" name="payment" value="card" checked />
+                        <div class="method-details">
+                            <div class="method-title">
+                                <i class="fas fa-credit-card method-icon"></i>
+                                Credit / Debit Card
+                            </div>
+                            <div class="method-description">Pay securely with your Visa, Mastercard, or Rupay card</div>
+                        </div>
+                    </label>
+
+                    <div class="card-details" id="cardDetails">
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number</label>
+                            <input type="text" id="cardNumber" class="form-control" placeholder="1234 5678 9012 3456" />
+                            <span class="error-message">Please enter a valid card number</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="expiry">Expiry Date</label>
+                            <input type="text" id="expiry" class="form-control" placeholder="MM/YY" />
+                            <span class="error-message">Please enter valid expiry date</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" class="form-control" placeholder="123" />
+                            <span class="error-message">Please enter valid CVV</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="cardName">Name on Card</label>
+                            <input type="text" id="cardName" class="form-control" placeholder="Name as on card" />
+                            <span class="error-message">Please enter name on card</span>
+                        </div>
+                    </div>
+
+                    <!-- UPI Payment -->
+                    <label class="payment-method">
+                        <input type="radio" name="payment" value="upi" id="upiRadio" />
+                        <div class="method-details">
+                            <div class="method-title">
+                                <i class="fas fa-mobile-alt method-icon"></i>
+                                UPI Payment
+                            </div>
+                            <div class="method-description">Pay instantly using any UPI app</div>
+                        </div>
+                    </label>
+
+                    <div class="upi-apps" id="upiApps">
+                        <p>Select UPI App:</p>
+                        <div class="upi-apps-grid">
+                            <div class="upi-app" data-upi="1234567890@okgpay">
+                                <img src="imgUrl/Gpay.png" alt="Gpay" />
+                                <span>Google Pay</span>
+                            </div>
+                            <div class="upi-app" data-upi="1234567890@ybl">
+                                <img src="imgUrl/PhonePay.png" alt="PhonePe" />
+                                <span>PhonePe</span>
+                            </div>
+                            <div class="upi-app" data-upi="1234567890@paytm">
+                                <img src="imgUrl/Paytm.png" alt="Paytm" />
+                                <span>Paytm</span>
+                            </div>
+                            <div class="upi-app" data-upi="1234567890@upi">
+                                <img src="imgUrl/Bhim.png" alt="BHIM" />
+                                <span>BHIM</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="upiInput">Enter UPI ID</label>
+                            <input type="text" id="upiInput" class="form-control" placeholder="yourname@upi" />
+                            <span class="error-message">Please enter a valid UPI ID</span>
+                        </div>
+                    </div>
+
+                    <!-- COD Payment -->
+                    <label class="payment-method">
+                        <input type="radio" name="payment" value="cod" />
+                        <div class="method-details">
+                            <div class="method-title">
+                                <i class="fas fa-money-bill-wave method-icon"></i>
+                                Cash on Delivery
+                            </div>
+                            <div class="method-description">Pay when you receive your order</div>
+                        </div>
+                    </label>
+                </div>
+
+                <button class="btn" id="payButton">Pay ₹299</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

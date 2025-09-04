@@ -1,0 +1,274 @@
+body {
+    background-color: rgba(0, 0, 0, 0.893);
+    color: white;
+}
+
+#txt {
+    margin-top: 100px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container-list {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 50px;
+}
+
+.text {
+    line-height: 0.9;
+    color: black;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    margin-right: 20px;
+
+}
+
+h3 li {
+    padding-left: 50px;
+}
+
+.addtokart {
+    background-color: black;
+    border-radius: 30px;
+    height: 50px;
+    width: 190px;
+    text-align: center;
+    margin-left: 40px;
+    margin-top: 35px;
+
+}
+
+.addtokart:hover {
+    background-color: rgba(0, 0, 0, 0.69);
+}
+
+.addtokart>h3 {
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+.items {
+    background-color: white;
+    border-radius: 10px;
+    width: 300px;
+    height: 440px;
+    box-shadow: 10px 20px 20px 10px rgb(0, 0, 0)
+}
+
+.items img {
+    border-radius: 10px;
+}
+
+p {
+    font-family: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+@media(min-width: 360px) and (max-width: 650px) {
+    .container-list {
+
+        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+    }
+
+    .items {
+
+        width: 100%;
+        height: auto;
+        box-shadow: 5px 10px 10px 5px rgb(0, 0, 0);
+
+    }
+
+    .addtokart {
+        height: auto;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .addtokart>h3 {
+        padding: 10px;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    #txt {
+        margin-top: 70px;
+        font-size: 1rem;
+    }
+
+    .text {
+        line-height: 1;
+        font-size: 0.7rem;
+
+
+    }
+
+    img {
+        width: 100%;
+        height: 100px;
+    }
+
+}
+
+.listCart li {
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: #fff;
+    row-gap: 10px;
+}
+
+.listCart li div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listCart li img {
+    width: 90%;
+}
+
+.listCart li button {
+    background-color: #fff5;
+    border: none;
+    padding: 1px 5px;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+}
+
+.listCart .count {
+    margin: 0 10px;
+}
+
+.total {
+    margin-top: 35px;
+    margin-left: 15px;
+}
+
+/* Mobile Responsive CSS for Drinks Menu - Grid Layout */
+@media only screen and (max-width: 768px) {
+    body {
+        background-color: rgba(0, 0, 0, 0.893);
+    }
+
+    #txt {
+        margin-top: 90px !important;
+        font-size: 1.3rem;
+        padding: 0;
+    }
+
+    /* Grid layout for mobile */
+    .container-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 items per row */
+        gap: 20px;
+        padding: 20px;
+        justify-items: center;
+        /* Center items in grid */
+    }
+
+    .items {
+        width: 100%;
+        max-width: 180px;
+        /* Prevent overly large items */
+        height: auto;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .items img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .text {
+        padding: 10px;
+        line-height: 1.4;
+        font-size: 0.95rem;
+        text-align: center;
+    }
+
+    .items h3 {
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+    }
+
+    .items p {
+        font-size: 0.85rem;
+        margin-bottom: 8px;
+    }
+
+    .items .price {
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 5px 0;
+    }
+
+    .addtokart {
+        width: 90%;
+        margin: 10px auto 15px;
+        height: 40px;
+        text-align: center;
+    }
+
+    .addtokart>h3 {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra small devices (phones under 400px) */
+@media only screen and (max-width: 400px) {
+    #txt {
+        font-size: 1.1rem;
+        margin-top: 40px;
+    }
+
+    .container-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .items {
+        max-width: 150px;
+    }
+
+    .items img {
+        height: 130px;
+    }
+
+    .text {
+        padding: 8px;
+    }
+
+    .items h3 {
+        font-size: 1rem;
+    }
+
+    .items p {
+        font-size: 0.8rem;
+    }
+
+    .items .price {
+        font-size: 0.9rem;
+    }
+
+    .addtokart {
+        height: 35px;
+    }
+
+    .addtokart>h3 {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tholua</title>
+
+    <link rel="stylesheet" href="css-file/style.css">
+    <link rel="stylesheet" href="css-file/cart.css" />
+    <link rel="stylesheet" href="css-file/nonveg.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/f1035c0313.js" crossorigin="anonymous"></script>
+    <script src="javascript/config.js"></script>
+    <script src="javascript/script.js" defer></script>
+    <script src="javascript/cart.js" defer></script>
+    <script src="javascript/auth.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">Tholua</a>
+        </div>
+        <nav>
+            <div class="bar" onclick="toggleNav()">☰</div>
+            <ul class="nav-link">
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <!-- <div class="bar">
+            <i class="fa-solid fa-bars" aria-label="Menu Toggle" style="color: #000000;"></i>
+        </div> -->
+        <div class="User">
+            <a class="open-cart">
+                <div class="shopping" aria-label="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="quantity">0</span>
+                </div>
+            </a>
+            <div class="login-btn">
+                <a class="open-modal" data-type="login" aria-label="Login"><i class="fa-solid fa-user"></i></a>
+            </div>
+        </div>
+
+    </header>
+
+
+
+    <section id="first-page">
+        <p class="line1">Enjoy your</p>
+        <p class="line2">Khaana</p>
+        <p class="line3">It was made with love ♡</p>
+
+        <!-- Modal -->
+        <div class="modal" id="authModal">
+            <div class="modal-content">
+
+                <!-- Login Form -->
+                <div class="form-box login">
+                    <div class="wrapper">
+                        <span class="close" aria-label="Close Modal">&times;</span>
+                        <form action="http://localhost:5000/api/auth/login" method="post">
+                            <h2>Login</h2>
+                            <div class="input-field">
+                                <input type="text" required />
+                                <label>Email</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="password" required />
+                                <label>Password</label>
+                            </div>
+                            <div class="forget">
+                                <label for="remember">
+                                    <input type="checkbox" id="remember" />
+                                    <p>Remember me</p>
+                                </label>
+                                <a href="/html-file/forget_password.html">Forgot password?</a>
+                            </div>
+                            <button type="submit">Log In</button>
+                            <div class="register">
+                                <p>Don't have an account? <a href="#" class="signup-link">Sign Up</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Sign Up Form -->
+                <div class="form-box signup">
+                    <div class="wrapper">
+                        <span class="close" aria-label="Close Modal">&times;</span>
+                        <form action="http://localhost:5000/api/auth/signup" method="post">
+                            <h2>Sign Up</h2>
+                            <div class="input-field">
+                                <input type="text" required />
+                                <label>Your Name</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" required />
+                                <label>Enter your email</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="password" required />
+                                <label>Create your password</label>
+                            </div>
+                            <div class="Policy-text">
+                                <input type="checkbox" id="policy" />
+                                <label for="policy">
+                                    I agree to the <a href="#">Terms & Conditions</a>
+                                </label>
+                            </div>
+                            <button type="submit">Sign Up</button>
+                            <div class="register">
+                                <p>Already have an account? <a href="#" class="login-link">Sign In</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="second-page">
+        <div class="content-container">
+            <div class="images-container">
+                <div class="image-item first-image">
+                    <img src="imgUrl/first_pork.jpg" alt="First Pork Dish" width="100%" loading="lazy" />
+                </div>
+                <div class="image-item second-image">
+                    <img src="imgUrl/second_pork.jpg" alt="Second Pork Dish" width="100%" loading="lazy" />
+                </div>
+                <div class="image-item third-image">
+                    <img src="imgUrl/third_pork.jpg" alt="Third Pork Dish" width="100%" loading="lazy" />
+                </div>
+            </div>
+            <div class="text-container">
+                <h1>A Taste of Tholua</h1>
+                <p>
+                    Tholua Kitchen was born from a love of all things Assam. Our founder and chef Richika Senpai spent
+                    three amazing years in the City of Dreams, training under the industry's best. She brought home
+                    everything she learned—the flavors, the feelings, the family-style cafe—so that you can get a taste
+                    of Assam, too.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Placeholder Gallery Section -->
+    <section class="Gallery">
+        <!-- Content will be added -->
+    </section>
+
+    <!-- Add to Cart Panel -->
+    <div class="Add-to-cart-tab" id="cartPanel">
+        <h1>Shopping Cart</h1>
+        <div class="listCart"></div>
+        <p class="total">Total: ₹0</p>
+        <div class="btn">
+            <button type="button" class="close-btn" aria-label="Close Cart">Close</button>
+            <button type="button" class="checkOut-btn" aria-label="Proceed to Checkout">Check Out</button>
+        </div>
+        <div class="cart-summary"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col">
+                <a class="logo-footer" href="#">Tholua</a>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s.
+                </p>
+            </div>
+            <div class="col">
+                <h3>Office</h3>
+                <p>ITPL Road</p>
+                <p>Whitefield, Bangalore</p>
+                <p>Karnataka, PIN 560066, India</p>
+                <p class="email-id">Tholua111@gmail.com</p>
+                <h4>+91 - 0123456789</h4>
+            </div>
+            <div class="col">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Newsletter</h3>
+                <form class="foot">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Enter your email id" required />
+                    <button type="submit">
+                        <i class="fa-solid fa-arrow-right" style="color: #ccc;"></i>
+                    </button>
+                </form>
+                <div class="social-icons">
+                    <i class="fa-brands fa-square-instagram" style="color: #ccc;"></i>
+                    <i class="fa-brands fa-square-facebook" style="color: #ccc;"></i>
+                    <i class="fa-brands fa-square-whatsapp" style="color: #ccc;"></i>
+                    <i class="fa-brands fa-square-pinterest" style="color: #ccc;"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

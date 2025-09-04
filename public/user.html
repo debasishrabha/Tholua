@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Dashboard</title>
+
+    <!-- CSS files -->
+
+    <link rel="stylesheet" href="css-file/user.css">
+    <link rel="stylesheet" href="css-file/cart.css">
+    <link rel="stylesheet" href="css-file/style.css">
+
+    <!-- JS files -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="javascript/config.js" defer></script>
+    <script src="javascript/auth.js" defer></script>
+    <script src="javascript/user.js" defer></script>
+    <script src="javascript/cart.js" defer></script>
+    <script src="javascript/script.js" defer></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap"
+        rel="stylesheet" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/f1035c0313.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html">Tholua</a>
+        </div>
+        <nav>
+            <div class="bar" onclick="toggleNav()">☰</div>
+            <ul class="nav-link">
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+
+        <div class="User">
+            <a class="open-cart">
+                <div class="shopping"><i class="fa-solid fa-cart-shopping"></i><span class="quantity">0</span></div>
+            </a>
+            <div class="login-btn">
+                <a class="open-modal" data-type="login"><i class="fa-solid fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li onclick="showSection('orders')" class="active">Orders</li>
+            <li onclick="showSection('profile')">Profile</li>
+
+            <li onclick="showSection('settings')">Help</li>
+            <li onclick="logoutUser()">Logout</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Orders Section -->
+        <div id="orders" class="section active">
+            <h2>Your Orders</h2>
+            <div class="tabs">
+                <div class="tab active" onclick="switchOrderTab('current')">Current Orders</div>
+                <div class="tab" onclick="switchOrderTab('past')">Past Orders</div>
+            </div>
+            <div id="current-orders" class="tab-content">
+                <p>Loading current orders...</p>
+            </div>
+            <div id="past-orders" class="tab-content" style="display: none;">
+                <p>Loading past orders...</p>
+            </div>
+        </div>
+
+        <!-- Profile Section -->
+        <div id="profile" class="section">
+            <h2>Profile</h2>
+            <div class="edit-profile">
+                <p class="profile-name">Loading...</p>
+                <button class="change-btn">Change</button>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <!-- Cart Panel -->
+    <div class="Add-to-cart-tab" id="cartPanel">
+        <h1>Shopping Cart</h1>
+        <div class="listCart"></div>
+        <p class="total">Total: ₹0</p>
+        <div class="btn">
+            <button type="button" class="close-btn">Close</button>
+            <button type="button" class="checkOut-btn">Check Out</button>
+        </div>
+        <div class="cart-summary"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tholua</title>
+    <link rel="stylesheet" href="css-file/nonveg.css">
+    <link rel="stylesheet" href="css-file/cart.css">
+    <link rel="stylesheet" href="css-file/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="javascript/config.js"></script>
+    <script src="javascript/script.js" defer></script>
+    <script src="javascript/cart.js" defer></script>
+    <script src="javascript/auth.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="index.html">Tholua</a></div>
+
+        <nav>
+            <div class="bar" onclick="toggleNav()">☰</div>
+
+            <ul class="nav-link">
+                <a href="Menu.html">
+                    <li>Menu</li>
+                </a>
+                <a href="event.html">
+                    <li>Events</li>
+                </a>
+                <a href="gallery.html">
+                    <li>Gallery</li>
+                </a>
+                <a href="about.html">
+                    <li>About</li>
+                </a>
+            </ul>
+        </nav>
+        <div class="User">
+            <a>
+                <div class="shopping"><i class="fa-solid fa-cart-shopping"></i>
+                    <span class="quantity">0</span>
+                </div>
+            </a>
+
+            <div class="login-btn">
+                <a><i class="fa-solid fa-user"></i></a>
+            </div>
+
+        </div>
+    </header>
+    <div class="modal">
+        <div class="modal-content">
+            <div class="form-box login">
+                <div class="wrapper">
+                    <span class="close">&times;</span>
+                    <form action="#">
+                        <h2>Login</h2>
+                        <div class="input-field">
+                            <input type="text" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="forget">
+                            <label for="remember">
+                                <input type="checkbox" id="remember">
+                                <p>Remember me</p>
+                            </label>
+                            <a href="#">Forgot password?</a>
+                        </div>
+                        <button type="submit">Log In</button>
+                        <div class="register">
+                            <p>Don't have an account? <a href="#" class="signup-link">Sign Up</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="form-box signup">
+                <div class="wrapper">
+                    <span class="close">&times;</span>
+                    <form action="#">
+                        <h2>Sign Up</h2>
+                        <div class="input-field">
+                            <input type="text" required>
+                            <label>Enter your email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" required>
+                            <label>Create your password</label>
+                        </div>
+                        <div class="Policy-text">
+                            <input type="checkbox" id="policy">
+                            <label for="policy">
+                                I agree the
+                                <a href="#">Terms & Conditiion</a></thead>
+                            </label>
+                        </div>
+                        <button type="submit">Sign Up</button>
+                        <div class="register">
+                            <p>Already have an account? <a href="#" class="login-link">Sign In</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="txt">
+        <h3>
+            <ul>
+                <li> NonVeg Thali</li>
+            </ul>
+        </h3>
+    </div>
+    <hr>
+    <div class="container-list">
+        <div class="items" data-id="1" data-name="Chicken Gravy" data-price="150" data-image="nonveg1.jpg">
+            <img src="imgUrl/nonveg1.jpg" alt="nonveg1" width="100%" height="221px">
+            <div class=text>
+                <h3>Chicken Gravy.</h3>
+                <p>Rice with chicken gravy and many extra chutneys five to six pieces of chicken leg piece, serves one.
+                <p>
+                <h3>₹150.00 </h3>
+                <div class="addtokart">
+                    <h3>Add to cart +</h3>
+                </div>
+            </div>
+        </div>
+        <div class="items" data-id="2" data-name="Chicken Dry Fry" data-price="130" data-image="nonveg2.jpg">
+            <img src="imgUrl/nonveg2.jpg" alt="nonveg2" width="100%" height="221px">
+            <div class=text>
+                <h3>Chicken Dry Fry.</h3>
+                <p>Rice with chicken dry fry and many extra chutneys 5 pieces of chicken leg piece, serves one.
+                <p>
+                <h3>₹130.00 </h3>
+                <div class="addtokart">
+                    <h3>Add to cart +</h3>
+                </div>
+            </div>
+        </div>
+        <div class="items" data-id="3" data-name="Fish Curry" data-price="110" data-image="nonveg3.jpg">
+            <img src="imgUrl/nonveg3.jpg" alt="nonveg3" width="100%" height="221px">
+            <div class=text>
+                <h3>Fish Curry.</h3>
+                <p>Rice with fish curry and many extra chutneys two to three pieces of fish, serves one.
+                <p>
+                <h3>₹110.00 </h3>
+                <div class="addtokart">
+                    <h3>Add to cart +</h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="items" data-id="4" data-name="Fish Dry Fry" data-price="120" data-image="nonveg4.jpg">
+            <img src="imgUrl/nonveg4.jpg" alt="nonveg4" width="100%" height="221px">
+            <div class=text>
+                <h3>Fish Dry Fry.</h3>
+                <p>Rice with fish dry fry and many extra chutneys three pieces of fish dry fry, serves one.
+                <p>
+                <h3>₹120.00 </h3>
+                <div class="addtokart">
+                    <h3>Add to cart +</h3>
+                </div>
+
+            </div>
+        </div>
+        <div class="items" data-id="5" data-name="Pork Gravy" data-price="150" data-image="nonveg5.jpg">
+            <img src="imgUrl/nonveg5.jpg" alt="nonveg5" width="100%" height="221px">
+            <div class=text>
+                <h3>Pork Gravy.</h3>
+                <p>Rice with pork gravy and many extra chutneys three to four pieces of pork, serves one.
+                <p>
+                <h3><del>₹150</del> ₹50.00 offer</h3>
+                <div class="addtokart">
+                    <h3>Add to cart +</h3>
+                </div>
+
+            </div>
+        </div>
+        <div class="items" data-id="6" data-name="Pork Dry Fry" data-price="150" data-image="nonveg6.jpg">
+            <img src="imgUrl/nonveg6.jpg" alt="nonveg6" width="100%" height="221px">
+            <div class=text>
+                <h3>Pork Dry Fry.</h3>
+                <p>Rice with pork dry fry and many extra chutneys three to four pieces of pork, serves one.
+                <p>
+                <h3><del>₹150</del> ₹60.00 offer</h3>
+                <div class="addtokart">
+                    <h3>Add to cart +</h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="items" data-id="7" data-name="Pork (Oma Saonai)" data-price="100" data-image="nonbrg7.webp">
+            <img src="imgUrl/nonbrg7.webp" alt="nonveg7" width="100%" height="221px">
+            <div class=text>
+                <h3>Pork (Oma Saonai).</h3>
+                <p>Rice with Special smoked pork and many extra chutneys three to four pieces of pork, serves one.
+                <p>
+                <h3><del>₹100</del> ₹50.00 offer</h3>
+                <div class="addtokart">
+                    <h3>Add to cart +</h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="items" data-id="8" data-name="Pork" data-price="200" data-image="nonveg8.jpg">
+
+            <img src="imgUrl/nonveg8.jpg" alt="nonveg8" width="100%" height="221px">
+            <div class=text>
+                <h3>Pork (Narzi and pork).</h3>
+                <p>Rice with special bodo dish Narzi and pork dish, four to five pieces of pork, serves one.
+                <p>
+                <h3><del>₹200</del> ₹80.00 offer</h3>
+                <div class="addtokart">
+                    <h3>Add to cart +</h3>
+                </div>
+
+            </div>
+        </div>
+        <div class="items" data-id="9" data-name="Onla and Chicken" data-price="100" data-image="nonveg9.jpg">
+
+            <img src="imgUrl/nonveg9.jpg" alt="nonveg8" width="100%" height="221px">
+            <div class=text>
+                <h3> Onla and Chicken</h3>
+                <p>Rice with special bodo dish Onla and chicken dish, four to five pieces of chicken, serves one.
+                <p>
+                <h3> ₹100.00 </h3>
+                <div class="addtokart">
+                    <h3>Add to cart +</h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="items" data-id="10" data-name=" Omlet" data-price="50" data-image="nonveg10.webp">
+            <img src="imgUrl/nonveg10.webp" alt="nonveg8" width="100%" height="221px">
+            <div class=text>
+                <h3> Omlet</h3>
+                <p>Rice with omlet and many extra chutneys, serves one.
+                <p>
+                    <br>
+                <h3> ₹50.00 </h3>
+                <div class="addtokart">
+                    <h3>Add to cart +</h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="Add-to-cart-tab">
+            <h1>Shopping Cart</h1>
+            <div class="listCart">
+
+            </div>
+            <p class="total">Total: ₹0</p>
+            <div class="btn">
+                <button class="close-btn">Close</button>
+                <button class="checkOut-btn">Check Out</button>
+            </div>
+            <div class="cart-summary"></div>
+            <!-- <p class="quantity">Items: 0</p> -->
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+.body {
+    background-color: black;
+
+}
+
+#bgimg-menu {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.menu-container {
+    margin: 30px;
+}
+
+.container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 50px;
+
+}
+
+.container .text {
+    margin-top: 50px;
+    background-color: #fff;
+    border-radius: 55px;
+    width: 290px;
+    height: 80px;
+    text-align: center;
+}
+
+.container .text a {
+    text-decoration: none;
+}
+
+.text h2 {
+    margin-top: 20px;
+    color: black;
+    font-size: 2rem;
+}
+
+#img1-menu {
+    border-radius: 50%;
+}
+
+#img2-menu {
+    border-radius: 50%;
+}
+
+#img3-menu {
+    border-radius: 50%;
+}
+
+#img4-menu {
+    border-radius: 50%;
+}
+
+@media (min-width: 360px) and (max-width: 768px) {
+
+    #img1,
+    #img2,
+    #img3,
+    #img4 {
+        height: 100px;
+        width: 100px;
+    }
+
+    .text {
+        width: 50%;
+        height: 60px;
+        margin-top: 20px;
+    }
+
+    .text h2 {
+        font-size: 1.3rem;
+    }
+
+    .container {
+        gap: 20px;
+    }
+
+    #bgimg {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Center and stack menu items */
+    .container {
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    /* Make images smaller for mobile */
+    #img1-menu,
+    #img2-menu,
+    #img3-menu,
+    #img4-menu {
+        height: 90px;
+        width: 90px;
+        border-radius: 50%;
+    }
+
+    /* Adjust text box */
+    .container .text {
+        width: 100px;
+        height: auto;
+        padding: 8px 10px;
+        margin-top: 8px;
+        border-radius: 40px;
+    }
+
+    .text h2 {
+        font-size: 1rem;
+        margin: 2px 0;
+    }
+
+    /* Background image for mobile */
+    #bgimg-menu {
+        display: block;
+        margin: 20px auto;
+        height: 120px;
+        margin-top: 60px;
+    }
+}

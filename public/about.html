@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css-file/nonveg.css">
+    <link rel="stylesheet" href="css-file/cart.css">
+    <link rel="stylesheet" href="css-file/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/f1035c0313.js"></script>
+    <title>About Us | Tholua</title>
+    <script src="javascript/config.js"></script>
+    <script src="javascript/cart.js" defer></script>
+    <script src="javascript/script.js" defer></script>
+    <script src="javascript/auth.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="index.html">Tholua</a></div>
+
+        <nav>
+            <div class="bar" onclick="toggleNav()">☰</div>
+
+            <ul class="nav-link">
+                <a href="Menu.html">
+                    <li>Menu</li>
+                </a>
+                <a href="event.html">
+                    <li>Events</li>
+                </a>
+                <a href="gallery.html">
+                    <li>Gallery</li>
+                </a>
+                <a href="about.html">
+                    <li>About</li>
+                </a>
+            </ul>
+        </nav>
+        <div class="User">
+            <a>
+                <div class="shopping"><i class="fa-solid fa-cart-shopping"></i>
+                    <span class="quantity">0</span>
+                </div>
+            </a>
+
+            <div class="login-btn">
+                <a><i class="fa-solid fa-user"></i></a>
+            </div>
+
+        </div>
+    </header>
+    <div class="modal">
+        <div class="modal-content">
+            <div class="form-box login">
+                <div class="wrapper">
+                    <span class="close">&times;</span>
+                    <form action="#">
+                        <h2>Login</h2>
+                        <div class="input-field">
+                            <input type="text" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="forget">
+                            <label for="remember">
+                                <input type="checkbox" id="remember">
+                                <p>Remember me</p>
+                            </label>
+                            <a href="#">Forgot password?</a>
+                        </div>
+                        <button type="submit">Log In</button>
+                        <div class="register">
+                            <p>Don't have an account? <a href="#" class="signup-link">Sign Up</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="form-box signup">
+                <div class="wrapper">
+                    <span class="close">&times;</span>
+                    <form action="#">
+                        <h2>Sign Up</h2>
+                        <div class="input-field">
+                            <input type="text" required />
+                            <label>Your Name</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" required>
+                            <label>Enter your email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" required>
+                            <label>Create your password</label>
+                        </div>
+                        <div class="Policy-text">
+                            <input type="checkbox" id="policy">
+                            <label for="policy">
+                                I agree the
+                                <a href="#">Terms & Conditiion</a></thead>
+                            </label>
+                        </div>
+                        <button type="submit">Sign Up</button>
+                        <div class="register">
+                            <p>Already have an account? <a href="#" class="login-link">Sign In</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <section class="slide1">
+        <div class="Text">
+            <div id="Heading">
+                <h1>Welcome</h1>
+                <h4>to</h4>
+                <h1>Tholua</h1>
+            </div>
+            <div id="prgrph">
+                <p>
+                    At Tholua,we believe that dining out should be a memorable experience. Located in the heart of
+                    Jorhat, our restaurant
+                    offers a warm and inviting atmosphere,perfect for any ocassions.Our menu is acelebration of
+                    flavours,crafted with the finest
+                    ingredients to delight your taste buds. From classic dishes to innovative culinary creations,our
+                    chefs are dedicated to providing
+                    a gastronomic experience that will leave you coming nack for more
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <section class="slide2">
+        <div id="Heading">
+            <h1>Who are we</h1>
+        </div>
+        <div class="flex1">
+            <img id="img1" src="imgUrl/ab1.jpg" alt="about-image1">
+            <img id="img2" src="imgUrl/ab2.jpg" alt="about-image1">
+            <img id="img3" src="imgUrl/ab3.jpg" alt="about-image1">
+        </div>
+        <div id="prg2">
+            <p>
+                At Tholua,we are more than just a place to eat, we are a destination for exceptional dining experiences.
+                Founded by DASH dash
+                in 2024, our restaurant has become a beloved spot in Jorhat,Assam for both locals and visitors alike.Our
+                team is a family of
+                passionate individuals who share a love for great food and excellent service.
+            </p>
+        </div>
+    </section>
+    <div class="Add-to-cart-tab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart">
+
+        </div>
+        <p class="total">Total: ₹0</p>
+        <div class="btn">
+            <button class="close-btn">Close</button>
+            <button class="checkOut-btn">Check Out</button>
+        </div>
+        <div class="cart-summary"></div>
+        <!-- <p class="quantity">Items: 0</p> -->
+    </div>
+    <footer>
+        <div class="row">
+            <div class="col"><a class="logo-footer" href="#">Tholua</a>
+                <p>Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                    scrambled it to make a type specimen book</p>
+            </div>
+            <div class="col">
+                <h3>Office</h3>
+                <p>ITPL Road</p>
+                <p>Whitefield, Bangalore</p>
+                <p>Karnataka, PIN 560066, India</p>
+                <p class="email-id">Thoula111@gmail.com</p>
+                <h4>+91 - 0123456789</h4>
+            </div>
+            <div class="col">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Menu</a></li>
+                    <li><a href="">Events</a></li>
+                    <li><a href="">Gallery</a></li>
+                    <li><a href="">About</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Newsletter</h3>
+                <form class="foot">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Enter your email id" required>
+                    <button type="submit"><i class="fa-solid fa-arrow-right" style="color: #ccc;"></i></button>
+                </form>
+                <div class="social-icons">
+                    <i class="fa-brands fa-square-instagram" style="color: #ccc;"></i>
+                    <i class="fa-brands fa-square-facebook" style="color: #ccc;"></i>
+                    <i class="fa-brands fa-square-whatsapp" style="color: #ccc;"></i>
+                    <i class="fa-brands fa-square-pinterest" style="color: #ccc;"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

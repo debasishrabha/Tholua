@@ -1,0 +1,113 @@
+.shopping {
+    position: relative;
+}
+
+.shopping span {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: red;
+    top: 50%;
+    right: -8px;
+}
+
+
+.Add-to-cart-tab {
+    width: 400px;
+    background-color: #353432;
+    color: white;
+    position: fixed;
+    left: 100%;
+    top: 0;
+    right: -10px;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 70px 2fr 70px;
+    transition: .5s;
+    z-index: 1000;
+}
+
+.showCart .Add-to-cart-tab {
+    left: calc(100%, -500px);
+}
+
+.showCart .Add-to-cart-tab {
+    transform: translateX(-400px);
+}
+
+.Add-to-cart-tab h1 {
+    padding: 10px;
+    margin: 0;
+    font-weight: 300;
+}
+
+.Add-to-cart-tab .btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.Add-to-cart-tab button {
+    background-color: #E8BC0E;
+    border: none;
+    font-family: Poppins;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.Add-to-cart-tab .close-btn {
+    background-color: white;
+    /* Corrected style */
+}
+
+@media (max-width: 768px) {
+    .Add-to-cart-tab {
+        width: 100%;
+        transform: translateX(100%);
+        /* hidden by default on mobile */
+        grid-template-rows: 60px 1fr 60px;
+        /* slightly smaller heights for mobile */
+        right: 0;
+        left: auto;
+    }
+
+    .showCart .Add-to-cart-tab {
+        transform: translateX(0);
+        /* slide in fully for mobile */
+    }
+
+    .Add-to-cart-tab h1 {
+        font-size: 1.2rem;
+        /* smaller heading */
+        padding: 8px;
+    }
+
+    .Add-to-cart-tab .btn {
+        grid-template-columns: 1fr;
+        /* stack buttons vertically on mobile */
+        gap: 8px;
+    }
+
+    .Add-to-cart-tab button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .shopping span {
+        top: 60%;
+        right: -4px;
+        font-size: 0.9rem;
+    }
+
+    .Add-to-cart-tab .total {
+        padding: 2px;
+        margin: 10px;
+    }
+
+    .shopping i {
+        font-size: 18px;
+        /* smaller than default (~24px) */
+    }
+
+
+}

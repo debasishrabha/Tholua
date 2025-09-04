@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Veg Thali | Tholua</title>
+    <link rel="stylesheet" href="css-file/nonveg.css">
+    <link rel="stylesheet" href="css-file/cart.css">
+    <link rel="stylesheet" href="css-file/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="javascript/config.js"></script>
+    <script src="javascript/script.js" defer></script>
+    <script src="javascript/cart.js" defer></script>
+    <script src="javascript/auth.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="index.html">Tholua</a></div>
+
+        <nav>
+            <div class="bar" onclick="toggleNav()">☰</div>
+            <ul class="nav-link">
+                <a href="Menu.html">
+                    <li>Menu</li>
+                </a>
+                <a href="event.html">
+                    <li>Events</li>
+                </a>
+                <a href="gallery.html">
+                    <li>Gallery</li>
+                </a>
+                <a href="about.html">
+                    <li>About</li>
+                </a>
+            </ul>
+        </nav>
+        <div class="User">
+            <a>
+                <div class="shopping"><i class="fa-solid fa-cart-shopping"></i>
+                    <span class="quantity">0</span>
+                </div>
+            </a>
+
+            <div class="login-btn">
+                <a><i class="fa-solid fa-user"></i></a>
+            </div>
+
+        </div>
+    </header>
+    <div class="modal">
+        <div class="modal-content">
+            <div class="form-box login">
+                <div class="wrapper">
+                    <span class="close">&times;</span>
+                    <form action="#">
+                        <h2>Login</h2>
+                        <div class="input-field">
+                            <input type="text" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="forget">
+                            <label for="remember">
+                                <input type="checkbox" id="remember">
+                                <p>Remember me</p>
+                            </label>
+                            <a href="#">Forgot password?</a>
+                        </div>
+                        <button type="submit">Log In</button>
+                        <div class="register">
+                            <p>Don't have an account? <a href="#" class="signup-link">Sign Up</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="form-box signup">
+                <div class="wrapper">
+                    <span class="close">&times;</span>
+                    <form action="#">
+                        <h2>Sign Up</h2>
+                        <div class="input-field">
+                            <input type="text" required>
+                            <label>Enter your email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" required>
+                            <label>Create your password</label>
+                        </div>
+                        <div class="Policy-text">
+                            <input type="checkbox" id="policy">
+                            <label for="policy">
+                                I agree the
+                                <a href="#">Terms & Conditiion</a></thead>
+                            </label>
+                        </div>
+                        <button type="submit">Sign Up</button>
+                        <div class="register">
+                            <p>Already have an account? <a href="#" class="login-link">Sign In</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="txt">
+        <h3>
+            <ul>
+                <li> Veg Thali</li>
+            </ul>
+        </h3>
+    </div>
+    <hr>
+    <div class="container-list">
+        <div class="items">
+            <div class="items" data-id="1" data-name="Paneer Gravy" data-price="50" data-image="veg1.jpg">
+                <img src="imgUrl/veg1.jpg" alt="veg1" width="100%" height="220px">
+                <div class=text>
+                    <h3>Paneer Gravy.</h3>
+                    <p>Rice with paneer gravy and many extra chutneys 5 pieces of paneer, serves one.
+                    <p><br>
+                    <h3>₹50.00 </h3>
+                    <div class="addtokart">
+                        <h3>Add to cart +</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="items" data-id="2" data-name="Idli" data-price="60" data-image="veg2.webp">
+                <img src="imgUrl/veg2.webp" alt="veg2" width="100%" height="221px">
+                <div class=text>
+                    <h3>Idli.</h3>
+                    <p>Idli with currys and many extra chutneys 4 pieces of idli, serves one.
+                    <p><br>
+                    <h3>₹60.00 </h3>
+                    <div class="addtokart">
+                        <h3>Add to cart +</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="items" data-id="3" data-name="Dosa" data-price="60" data-image="veg3.webp">
+                <img src="imgUrl/veg3.webp" alt="veg3" width="100%" height="221px">
+                <div class=text>
+                    <h3>Dosa.</h3>
+                    <p>Dosa with currys and many extra chutneys two pieces, serves one.
+                    <p><br>
+                    <h3>₹60.00 </h3>
+                    <div class="addtokart">
+                        <h3>Add to cart +</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="items" data-id="4" data-name="Veg Dal Rice" data-price="50" data-image="veg4.jpg">
+                <img src="imgUrl/veg4.jpg" alt="veg4" width="100%" height="221px">
+                <div class=text>
+                    <h3>Veg Dal Rice.</h3>
+                    <p>Rice with Dal and many extra currys and chutneys, serves one.
+                    <p><br>
+                    <h3>₹50.00 </h3>
+                    <div class="addtokart">
+                        <h3>Add to cart +</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="items" data-id="5" data-name="Paratha" data-price="50" data-image="veg5.jpg">
+                <img src="imgUrl/veg5.jpg" alt="veg5" width="100%" height="221px">
+                <div class=text>
+                    <h3>Paratha.</h3>
+                    <p>paratha with many currys and extra chutneys two pieces, serves one.
+                    <p><br>
+                    <h3> ₹50.00 </h3>
+                    <div class="addtokart">
+                        <h3>Add to cart +</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="items" data-id="6" data-name="Roti with Dal" data-price="60" data-image="veg6.webp">
+                <img src="imgUrl/veg6.webp" alt="veg6" width="100%" height="221px">
+                <div class=text>
+                    <h3>Roti with Dal.</h3>
+                    <p>Roti with dal and many extra chutneys and bhindi two pieces of roti, serves
+                        one.
+                    <p><br>
+                    <h3> ₹60.00 </h3>
+                    <div class="addtokart">
+                        <h3>Add to cart +</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Add-to-cart-tab">
+            <h1>Shopping Cart</h1>
+            <div class="listCart">
+
+            </div>
+            <p class="total">Total: ₹0</p>
+            <div class="btn">
+                <button class="close-btn">Close</button>
+                <button class="checkOut-btn">Check Out</button>
+            </div>
+            <div class="cart-summary"></div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Tholua</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css-file/menu.css">
+    <link rel="stylesheet" href="css-file/cart.css">
+    <link rel="stylesheet" href="css-file/style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Scripts -->
+    <script src="javascript/config.js"></script>
+    <script src="javascript/auth.js"></script>
+    <script src="javascript/script.js" defer></script>
+    <script src="javascript/cart.js" defer></script>
+
+</head>
+
+<body class="body">
+    <header>
+        <div class="logo">
+            <a href="index.html">Tholua</a>
+        </div>
+
+        <nav>
+            <div class="bar" onclick="toggleNav()">☰</div>
+
+            <ul class="nav-link">
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+
+        <div class="User">
+            <a class="cart-toggle">
+                <div class="shopping"><i class="fa-solid fa-cart-shopping"></i>
+                    <span class="quantity">0</span>
+                </div>
+            </a>
+
+            <div class="login-btn">
+                <a class="login-toggle"><i class="fa-solid fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Modal Section -->
+    <div class="modal">
+        <div class="modal-content">
+            <!-- Login Form -->
+            <div class="form-box login">
+                <div class="wrapper">
+                    <span class="close">&times;</span>
+                    <form action="#">
+                        <h2>Login</h2>
+                        <div class="input-field">
+                            <input type="text" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="forget">
+                            <label for="remember">
+                                <input type="checkbox" id="remember">
+                                <p>Remember me</p>
+                            </label>
+                            <a href="#">Forgot password?</a>
+                        </div>
+                        <button type="submit">Log In</button>
+                        <div class="register">
+                            <p>Don't have an account? <a href="#" class="signup-link">Sign Up</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Signup Form -->
+            <div class="form-box signup">
+                <div class="wrapper">
+                    <span class="close">&times;</span>
+                    <form action="#">
+                        <h2>Sign Up</h2>
+                        <div class="input-field">
+                            <input type="text" required>
+                            <label>Enter your email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" required>
+                            <label>Create your password</label>
+                        </div>
+                        <div class="Policy-text">
+                            <input type="checkbox" id="policy">
+                            <label for="policy">
+                                I agree to the <a href="#">Terms & Conditions</a>
+                            </label>
+                        </div>
+                        <button type="submit">Sign Up</button>
+                        <div class="register">
+                            <p>Already have an account? <a href="#" class="login-link">Sign In</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Images -->
+    <div class="menu-container">
+        <div class="backgimg">
+            <img id="bgimg-menu" src="imgUrl/menu.jpg" alt="menu" height="200px">
+        </div>
+
+        <div class="container">
+            <a href="nonveg.html"><img id="img1-menu" src="imgUrl/non-vegetarian-thali-5-jpg.webp" alt="non veg thali"
+                    height="200px"></a>
+            <div class="text"><a href="nonveg.html">
+                    <h2>Non Veg Thali</h2>
+                </a></div>
+        </div>
+
+        <div class="container">
+            <a href="veg.html"><img id="img2-menu" src="imgUrl/indian-thali.jpg" alt="veg thali" height="200px"></a>
+            <div class="text"><a href="veg.html">
+                    <h2>Veg Thali</h2>
+                </a></div>
+        </div>
+
+        <div class="container">
+            <a href="fastfood.html"><img id="img3-menu" src="imgUrl/fastfood.jpg" alt="fast food" height="200px"></a>
+            <div class="text"><a href="fastfood.html">
+                    <h2>Fast Foods</h2>
+                </a></div>
+        </div>
+
+        <div class="container">
+            <a href="drinks.html"><img id="img4-menu" src="imgUrl/cocktails.jpg" alt="drinks" height="200px"
+                    width="200px"></a>
+            <div class="text"><a href="drinks.html">
+                    <h2>Drinks</h2>
+                </a></div>
+        </div>
+
+    </div>
+    <!-- Cart Section -->
+    <div class="Add-to-cart-tab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart"></div>
+        <p class="total">Total: ₹0</p>
+        <div class="btn">
+            <button class="close-btn">Close</button>
+            <button class="checkOut-btn">Check Out</button>
+        </div>
+        <div class="cart-summary"></div>
+    </div>
+</body>
+
+</html>
