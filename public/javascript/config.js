@@ -7,5 +7,5 @@ const API_URL =
 // Export the variables
 export { API_URL };
 
-// Helper function to get token
-export const getToken = () => localStorage.getItem("token");
+// // Helper function to get token
+// export const getToken = () => localStorage.getItem("token");
