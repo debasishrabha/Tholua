@@ -1,3 +1,4 @@
+// ================= Selectors =================
 let openShopping = document.querySelector(".shopping");
 let closeShopping = document.querySelector(".close-btn");
 let body = document.querySelector("body");
@@ -5,6 +6,10 @@ let listCart = document.querySelector(".listCart");
 let total = document.querySelector(".total");
 let quantity = document.querySelector(".quantity");
 let addToCartButtons = document.querySelectorAll(".addtokart h3");
+
+// ================= Config (from config.js) =================
+const API_URL = window.API_URL;
+let token = window.getToken(); // always check from config.js
 
 // ================= Cart Toggle =================
 openShopping.addEventListener("click", () => {
@@ -88,7 +93,7 @@ async function addToCartBackend(product) {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                Authorization: `Bearer ${token}`,
+                ...(token && { Authorization: `Bearer ${token}` }),
             },
             body: JSON.stringify({
                 productId: product.id,
@@ -109,7 +114,7 @@ async function updateCartBackend(productId, qty) {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
-                Authorization: `Bearer ${token}`,
+                ...(token && { Authorization: `Bearer ${token}` }),
             },
             body: JSON.stringify({ productId, quantity: qty }),
         });
@@ -119,7 +124,8 @@ async function updateCartBackend(productId, qty) {
 }
 
 async function loadCartFromBackend() {
-    if (!token) return;
+    if (!token) return; // only load if logged in
+
     try {
         let res = await fetch(`${API_URL}/cart`, {
             headers: { Authorization: `Bearer ${token}` },
@@ -128,7 +134,7 @@ async function loadCartFromBackend() {
 
         // Map backend keys → frontend keys
         listCards = (data.items || []).map(item => ({
-            id: item.product_id,                // use product_id for cart operations
+            id: item.product_id,
             name: item.item_name,
             price: parseFloat(item.item_price),
             image: item.item_image,
@@ -144,6 +150,8 @@ async function loadCartFromBackend() {
 
 // ================= Init =================
 document.addEventListener("DOMContentLoaded", () => {
+    token = window.getToken(); // refresh token on page load
+
     if (token) {
         loadCartFromBackend(); // 🔗 Logged in → Load from backend
     } else {

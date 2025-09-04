@@ -1,4 +1,5 @@
-import { API_URL } from "./config.js";
+const API_URL = window.API_URL;
+
 
 // ===== Show login popup on profile button click =====
 const showPopupBtn = document.querySelector(".login-btn");
