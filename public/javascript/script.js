@@ -1,3 +1,5 @@
+import { API_URL } from "./config.js";
+
 // ===== Show login popup on profile button click =====
 const showPopupBtn = document.querySelector(".login-btn");
 const formPopup = document.querySelector(".modal-content");
@@ -15,7 +17,7 @@ showPopupBtn?.addEventListener("click", () => {
 });
 
 // Hide login popup
-hidePopupBtns.forEach(btn => {
+hidePopupBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
         document.body.classList.remove("show-popup");
         if (signInForm) signInForm.style.display = "none";
@@ -24,7 +26,7 @@ hidePopupBtns.forEach(btn => {
 });
 
 // Toggle between login and signup forms
-loginSignupLinks.forEach(link => {
+loginSignupLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
         e.preventDefault();
         const isSignup = link.classList.contains("signup-link");
@@ -42,15 +44,13 @@ if (signupForm) {
     signupForm.addEventListener("submit", async (e) => {
         e.preventDefault();
 
-        // Select all inputs inside signup form
         const inputs = signupForm.querySelectorAll("input");
-
-        const name = inputs[0].value;      // First input (Name)
-        const email = inputs[1].value;     // Second input (Email)
-        const password = inputs[2].value;  // Third input (Password)
+        const name = inputs[0].value;
+        const email = inputs[1].value;
+        const password = inputs[2].value;
 
         try {
-            const res = await fetch("http://localhost:5000/api/auth/signup", {
+            const res = await fetch(`${API_URL}/auth/signup`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ name, email, password }),
@@ -61,9 +61,7 @@ if (signupForm) {
 
             if (res.ok) {
                 alert("✅ Signup successful!");
-                signupForm.reset(); // clear form after signup
-
-                // Switch to login form after signup
+                signupForm.reset();
                 if (signInForm) signInForm.style.display = "block";
                 if (signUpForm) signUpForm.style.display = "none";
             } else {
@@ -90,7 +88,7 @@ if (loginForm) {
         const password = inputs[1].value;
 
         try {
-            const res = await fetch("http://localhost:5000/api/auth/login", {
+            const res = await fetch(`${API_URL}/auth/login`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, password }),
@@ -118,10 +116,9 @@ if (loginForm) {
     });
 }
 
-
 // ===== Checkout button redirect =====
-document.querySelector('.checkOut-btn')?.addEventListener('click', () => {
-    window.location.href = 'payment.html';
+document.querySelector(".checkOut-btn")?.addEventListener("click", () => {
+    window.location.href = "payment.html";
 });
 
 // ===== Mobile Nav Toggle =====
@@ -158,9 +155,8 @@ function resetNavOnResize() {
         icon.innerHTML = `☰`;
     }
 }
-// If logged in, clicking the user icon should go to user.html.
-// If not logged in, open the login modal.
 
+// ===== User icon (modal vs redirect) =====
 document.querySelectorAll(".open-modal").forEach((btn) => {
     btn.addEventListener("click", (e) => {
         e.preventDefault();
@@ -168,12 +164,10 @@ document.querySelectorAll(".open-modal").forEach((btn) => {
         const token = localStorage.getItem("token");
 
         if (token) {
-            // 🚀 User logged in → go straight to user.html
             window.location.href = "user.html";
-            return; // stop here, don't touch popup
+            return;
         }
 
-        // 🚪 User NOT logged in → show popup
         document.body.classList.add("show-popup");
         const loginForm = document.querySelector(".login-form");
         const signupForm = document.querySelector(".signup-form");
@@ -182,25 +176,23 @@ document.querySelectorAll(".open-modal").forEach((btn) => {
     });
 });
 
-
+// ===== Protected pages check =====
 document.addEventListener("DOMContentLoaded", async () => {
-    const protectedPages = ["user.html", "payment.html"]; // add all protected pages here
+    const protectedPages = ["user.html", "payment.html"];
     const currentPage = window.location.pathname.split("/").pop();
     const token = localStorage.getItem("token");
 
-    // If the page requires login but no token is found → redirect to index
     if (protectedPages.includes(currentPage) && !token) {
         window.location.href = "index.html";
         return;
     }
 
-    // If token exists and we’re on a protected page → verify user
     if (protectedPages.includes(currentPage) && token) {
         try {
-            const res = await fetch("http://localhost:5000/api/auth/me", {
+            const res = await fetch(`${API_URL}/auth/me`, {
                 method: "GET",
                 headers: {
-                    "Authorization": "Bearer " + token,
+                    Authorization: "Bearer " + token,
                 },
             });
 
@@ -208,13 +200,13 @@ document.addEventListener("DOMContentLoaded", async () => {
             console.log("User Profile:", data);
 
             if (res.ok) {
-                // Example: populate profile info if those elements exist
                 if (document.getElementById("userName"))
-                    document.getElementById("userName").innerText = data.user?.name || "No Name";
+                    document.getElementById("userName").innerText =
+                        data.user?.name || "No Name";
                 if (document.getElementById("userEmail"))
-                    document.getElementById("userEmail").innerText = data.user?.email || "No Email";
+                    document.getElementById("userEmail").innerText =
+                        data.user?.email || "No Email";
             } else {
-                // Invalid token → clear and redirect
                 localStorage.removeItem("token");
                 window.location.href = "index.html";
             }
@@ -225,7 +217,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     }
 });
-
 
 window.addEventListener("resize", resetNavOnResize);
 window.addEventListener("DOMContentLoaded", resetNavOnResize);
