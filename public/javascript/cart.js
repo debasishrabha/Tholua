@@ -8,8 +8,8 @@ let quantity = document.querySelector(".quantity");
 let addToCartButtons = document.querySelectorAll(".addtokart h3");
 
 // ================= Config (from config.js) =================
-const API_URL = window.API_URL;
-let token = window.getToken(); // always check from config.js
+let token = window.getToken();
+
 
 // ================= Cart Toggle =================
 openShopping.addEventListener("click", () => {
